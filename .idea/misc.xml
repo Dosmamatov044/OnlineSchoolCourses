@@ -19,12 +19,14 @@
         <entry key="..\:/Users/dosma/AndroidStudioProjects/OnlineSchoolCourses/app/src/main/res/drawable/rounded_grey_corner_backgrounde.xml" value="0.1575" />
         <entry key="..\:/Users/dosma/AndroidStudioProjects/OnlineSchoolCourses/app/src/main/res/drawable/spinner_background.xml" value="0.1475" />
         <entry key="..\:/Users/dosma/AndroidStudioProjects/OnlineSchoolCourses/app/src/main/res/drawable/square_background.xml" value="0.123" />
+        <entry key="..\:/Users/dosma/AndroidStudioProjects/OnlineSchoolCourses/app/src/main/res/drawable/user_photo.xml" value="0.144" />
         <entry key="..\:/Users/dosma/AndroidStudioProjects/OnlineSchoolCourses/app/src/main/res/layout-v31/fragment_personal_area.xml" value="0.20052083333333334" />
         <entry key="..\:/Users/dosma/AndroidStudioProjects/OnlineSchoolCourses/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/dosma/AndroidStudioProjects/OnlineSchoolCourses/app/src/main/res/layout/activity_register.xml" value="0.25885416666666666" />
         <entry key="..\:/Users/dosma/AndroidStudioProjects/OnlineSchoolCourses/app/src/main/res/layout/activity_register_and_enter.xml" value="0.12552083333333333" />
         <entry key="..\:/Users/dosma/AndroidStudioProjects/OnlineSchoolCourses/app/src/main/res/layout/activity_screen.xml" value="0.25729166666666664" />
         <entry key="..\:/Users/dosma/AndroidStudioProjects/OnlineSchoolCourses/app/src/main/res/layout/addition_of_food_materials.xml" value="0.25" />
+        <entry key="..\:/Users/dosma/AndroidStudioProjects/OnlineSchoolCourses/app/src/main/res/layout/certificate_fragment.xml" value="0.2653985507246377" />
         <entry key="..\:/Users/dosma/AndroidStudioProjects/OnlineSchoolCourses/app/src/main/res/layout/fragment_additional_information_about_user.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/dosma/AndroidStudioProjects/OnlineSchoolCourses/app/src/main/res/layout/fragment_authorization.xml" value="0.33" />
         <entry key="..\:/Users/dosma/AndroidStudioProjects/OnlineSchoolCourses/app/src/main/res/layout/fragment_change_password.xml" value="0.27291666666666664" />
@@ -39,6 +41,7 @@
         <entry key="..\:/Users/dosma/AndroidStudioProjects/OnlineSchoolCourses/app/src/main/res/layout/home_item.xml" value="0.25679347826086957" />
         <entry key="..\:/Users/dosma/AndroidStudioProjects/OnlineSchoolCourses/app/src/main/res/layout/persona_area_item.xml" value="0.33" />
         <entry key="..\:/Users/dosma/AndroidStudioProjects/OnlineSchoolCourses/app/src/main/res/layout/progress_dialog.xml" value="0.25729166666666664" />
+        <entry key="..\:/Users/dosma/AndroidStudioProjects/OnlineSchoolCourses/app/src/main/res/layout/screen_item.xml" value="0.25729166666666664" />
         <entry key="..\:/Users/dosma/AndroidStudioProjects/OnlineSchoolCourses/app/src/main/res/menu/users_navigation_menu.xml" value="0.25729166666666664" />
         <entry key="..\:/Users/dosma/AndroidStudioProjects/OnlineSchoolCourses/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.135" />
       </map>

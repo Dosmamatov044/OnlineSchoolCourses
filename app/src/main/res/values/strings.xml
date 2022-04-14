@@ -54,6 +54,10 @@
     <string name="share">Опубликовать</string>
     <string name="experience">Стаж</string>
     <string name="change_surname">Изменить фамилию</string>
+    <string name="finish_course">Вы успешно закончили курс</string>
+    <string name="certificate">Сертификат</string>
+    <string name="finished_course">Aleksey успешно завершил курс</string>
+    <string name="signature">Подпись</string>
 
 
     <string-array name="professions_array">

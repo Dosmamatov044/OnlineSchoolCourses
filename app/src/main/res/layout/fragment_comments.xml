@@ -26,7 +26,7 @@
     <ImageView
         android:id="@+id/user_photo_comments"
         android:layout_width="70dp"
-        android:layout_height="67dp"
+        android:layout_height="60dp"
         android:layout_alignParentStart="true"
         android:layout_marginStart="12dp"
         android:layout_alignParentTop="true"

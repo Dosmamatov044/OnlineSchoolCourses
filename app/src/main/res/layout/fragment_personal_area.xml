@@ -7,7 +7,7 @@
     tools:context=".ui.screen.ui.fragment.personalArea.PersonalAreaFragment">
 
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/user_photo_"
         android:layout_width="80dp"
         android:layout_height="77dp"
