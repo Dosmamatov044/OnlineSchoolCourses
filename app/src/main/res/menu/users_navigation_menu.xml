@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_home"
+        android:title="Home"
+        android:icon="@drawable/home_grey" />
+    <item android:id="@+id/action_personal_area"
+        android:title="Personal area"
+        android:icon="@drawable/ic_person" />
+    <item android:id="@+id/action_search"
+        android:title="Search"
+        android:icon="@drawable/search" />
+    <item android:id="@+id/action_education"
+        android:title="My education"
+        android:icon="@drawable/onlinelearning" />
+</menu>

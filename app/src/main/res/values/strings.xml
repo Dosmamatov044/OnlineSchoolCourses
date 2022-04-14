@@ -1,3 +1,75 @@
 <resources>
     <string name="app_name">OnlineSchoolCourses</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter">Войти</string>
+    <string name="forget_password">Забыли пароль?</string>
+    <string name="your_first_entry">Вы первый раз?</string>
+    <string name="register">Зарегистироваться.</string>
+    <string name="name">Имя</string>
+    <string name="surname">Фамилия</string>
+    <string name="email">Email</string>
+    <string name="get_link">Получить ссылку на почту</string>
+    <string name="_30">30</string>
+    <string name="or_register_with_google">Или Зарегистироваться с помощью</string>
+    <string name="password">password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="entry_email">Введите ваш email</string>
+    <string name="get_link_forget_password">Получить ссылку на сброс пароля</string>
+    <string name="change_password">Изменить пароль</string>
+    <string name="completeThisPage">Прежде чем начать заполните эту страницу.</string>
+    <string name="choose_profession">Выберите профессию</string>
+    <string name="profession">Профессия</string>
+    <string name="about_career">коротко опишите о своем карьере</string>
+    <string name="career">Карьера</string>
+    <string name="tell_about_your_experience">расскажите о своем стаже работы</string>
+    <string name="diplomas_and_certificates">Дипломы и сертификаты</string>
+    <string name="photo">Фото</string>
+    <string name="description">Описание</string>
+    <string name="permission_denied">Разрешение не получен</string>
+    <string name="open">Открыть</string>
+    <string name="close">Закрыть</string>
+    <string name="save">Сохранить</string>
+    <string name="search">Поиск</string>
+    <string name="my_name">Dosmamatov</string>
+    <string name="profession_names">Математик</string>
+    <string name="base">Подписка : Base</string>
+    <string name="my_course">Мои курсы</string>
+    <string name="add_course_name">добавьте Название курса</string>
+    <string name="add_description">добавьте описание</string>
+    <string name="Price">Цена</string>
+    <string name="add_link_on_video">Добавить ссылку на видео материал</string>
+    <string name="add">Добавить</string>
+    <string name="get_file">Загрузить обучающих файлов</string>
+    <string name="download">Загрузить</string>
+    <string name="add_homework">Добавить домашнее задание</string>
+    <string name="add_test">Добавьте тесты для определенных тем</string>
+    <string name="change_name">Изменить имю</string>
+    <string name="update">Обновить</string>
+    <string name="money">25$</string>
+    <string name="profession_example">География</string>
+    <string name="names_course">углубленная изучения математики</string>
+    <string name="add_comment">Добавить коментарии</string>
+    <string name="more">Подробнее</string>
+    <string name="share">Опубликовать</string>
+    <string name="experience">Стаж</string>
+    <string name="change_surname">Изменить фамилию</string>
+
+
+    <string-array name="professions_array">
+        <item>Отсуствует</item>
+        <item>Литература</item>
+        <item>Физика</item>
+
+    </string-array>
+
+    <string-array name="price_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+
+    </string-array>
+
+
+
 </resources>

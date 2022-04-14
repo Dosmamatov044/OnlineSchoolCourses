@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "7875655781",
+    "firebase_url": "https://onlineschoolcourses-b436d-default-rtdb.firebaseio.com",
+    "project_id": "onlineschoolcourses-b436d",
+    "storage_bucket": "onlineschoolcourses-b436d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:7875655781:android:6446f9a3e002ed6c776e8c",
+        "android_client_info": {
+          "package_name": "com.example.onlineschoolcourses"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "7875655781-03s47qlkq64k3655s6prcja6hhhq2q8q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiI4cpE1boQGwhOL8m4tAV46G28qDbmaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "7875655781-03s47qlkq64k3655s6prcja6hhhq2q8q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

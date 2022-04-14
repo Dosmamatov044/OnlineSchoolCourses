@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/courseNames_img"
+        android:layout_width="138dp"
+        android:layout_height="87dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/any_photo"
+       app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10sp"
+        />
+    <TextView
+        android:id="@+id/addCourseNames_txt"
+        android:layout_width="168dp"
+        android:layout_height="23dp"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="124dp"
+        android:text="@string/add_course_name"
+        android:textAppearance="@style/medium_large_text_style"
+        android:gravity="center_horizontal|top"
+        android:fontFamily="@font/open_sans"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/courseNames_img"
+        app:layout_constraintRight_toRightOf="@id/courseNames_img"
+        />
+
+    <EditText
+        android:id="@+id/addCourseNames_edit"
+        android:layout_width="350dp"
+        android:layout_height="29dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+
+        android:background="@drawable/circle_background"
+        app:layout_constraintTop_toBottomOf="@id/addCourseNames_txt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10sp"
+        />
+
+    <TextView
+        android:id="@+id/addDescription_txt"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="17dp"
+        android:text="@string/add_description"
+        android:textAppearance="@style/medium_large_text_style"
+        android:gravity="center_horizontal|top"
+        android:fontFamily="@font/open_sans"
+        app:layout_constraintTop_toBottomOf="@id/addCourseNames_edit"
+       app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/addDescription_edit"
+        android:layout_width="350dp"
+        android:layout_height="29dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+
+        android:background="@drawable/circle_background"
+        app:layout_constraintTop_toBottomOf="@id/addDescription_txt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10sp"
+        />
+    <TextView
+        android:id="@+id/profession_txt"
+        android:layout_width="64dp"
+        android:layout_height="23dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="13dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="23dp"
+        android:text="@string/profession"
+        android:fontFamily="@font/pattaya"
+        android:textColor="@color/black"
+        android:gravity="top"
+        app:layout_constraintTop_toBottomOf="@id/addDescription_edit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <Spinner
+        android:id="@+id/profession_spinner"
+        android:layout_width="195dp"
+        android:layout_height="36dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/spinner_background"
+        app:layout_constraintLeft_toLeftOf="@id/addDescription_txt"
+        app:layout_constraintTop_toBottomOf="@id/addDescription_edit"
+        />
+
+    <TextView
+        android:id="@+id/price_txt"
+        android:layout_width="64dp"
+        android:layout_height="23dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="13dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="33dp"
+        android:text="@string/Price"
+        android:fontFamily="@font/pattaya"
+        android:textColor="@color/black"
+        android:gravity="top"
+      app:layout_constraintTop_toBottomOf="@id/profession_txt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <Spinner
+        android:id="@+id/price_spinner"
+        android:layout_width="195dp"
+        android:layout_height="36dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/spinner_background"
+        app:layout_constraintLeft_toLeftOf="@id/addDescription_txt"
+        app:layout_constraintTop_toBottomOf="@id/profession_spinner"
+        />
+
+    <TextView
+        android:id="@+id/addLinkOnVideo_txt"
+        android:layout_width="260dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="58dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="27dp"
+        android:text="@string/add_link_on_video"
+        android:textAppearance="@style/normal_text_style"
+        android:gravity="top"
+        app:layout_constraintTop_toBottomOf="@+id/price_spinner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:fontFamily="@font/open_sans"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addLinkOnVideo_btn"
+        android:layout_width="82dp"
+        android:layout_height="29dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="44dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/circle_background"
+        app:layout_constraintTop_toBottomOf="@id/addLinkOnVideo_txt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/add"
+        android:fontFamily="@font/pattaya"
+        android:textAppearance="@style/normal_text_style"
+        />
+
+    <EditText
+        android:id="@+id/addLinkOnVideo_edit"
+        android:layout_width="195dp"
+        android:layout_height="29dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+
+        android:background="@drawable/circle_background"
+       app:layout_constraintTop_toTopOf="@id/addLinkOnVideo_btn"
+        app:layout_constraintBottom_toBottomOf="@id/addLinkOnVideo_btn"
+        app:layout_constraintLeft_toRightOf="@id/addLinkOnVideo_btn"
+        android:layout_marginLeft="60sp"
+        />
+
+    <TextView
+        android:id="@+id/get_file_txt"
+        android:layout_width="210dp"
+        android:layout_height="26dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:text="@string/get_file"
+        android:textAppearance="@style/normal_text_style"
+        android:gravity="top"
+        app:layout_constraintTop_toBottomOf="@id/addLinkOnVideo_edit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:fontFamily="@font/open_sans"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/get_file_btn"
+        android:layout_width="99dp"
+        android:layout_height="29dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/circle_background"
+        app:layout_constraintTop_toBottomOf="@id/get_file_txt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="210sp"
+        android:text="@string/download"
+        android:fontFamily="@font/pattaya"
+        android:textAppearance="@style/normal_text_style"
+        />
+
+        <TextView
+            android:id="@+id/get_file_txt_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/get_file_btn"
+            app:layout_constraintBottom_toBottomOf="@id/get_file_btn"
+            app:layout_constraintLeft_toRightOf="@id/get_file_btn"
+            android:textAppearance="@style/normal_text_style"
+            android:fontFamily="@font/pattaya"
+
+            android:layout_marginStart="50sp"
+            />
+
+
+    <TextView
+        android:id="@+id/addHomeWork_txt"
+        android:layout_width="200dp"
+        android:layout_height="17dp"
+
+        android:text="@string/add_homework"
+        android:textAppearance="@style/normal_text_style"
+        android:gravity="top"
+        app:layout_constraintTop_toBottomOf="@id/get_file_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20sp"
+        />
+
+    <EditText
+        android:id="@+id/addHomeWork_edit"
+        android:layout_width="334dp"
+        android:layout_height="29dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/circle_background"
+        app:layout_constraintTop_toBottomOf="@id/addHomeWork_txt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20sp"
+        />
+    <TextView
+        android:id="@+id/addTest_txt"
+        android:layout_width="270dp"
+        android:layout_height="27dp"
+
+        android:text="@string/add_test"
+        android:textAppearance="@style/normal_text_style"
+        android:gravity="top"
+        app:layout_constraintTop_toBottomOf="@id/addHomeWork_edit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20sp"
+        />
+
+    <EditText
+        android:id="@+id/addTest_edit"
+        android:layout_width="334dp"
+        android:layout_height="29dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/circle_background"
+        app:layout_constraintTop_toBottomOf="@id/addTest_txt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20sp"
+        />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/save_data_btn"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/circle_background"
+            app:layout_constraintTop_toBottomOf="@id/addTest_edit"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@string/save"
+            android:fontFamily="@font/pattaya"
+            android:textAppearance="@style/normal_text_style"
+
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
