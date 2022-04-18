@@ -9,7 +9,8 @@ data class PersonalAreaMyCourseModel(
     var price: String = "",
     var profession: String = "",
     var test: String = "",
-    var youtubeUrl: String = ""
+    var youtubeUrl: String = "",
+    var timeStamp:Long=0
 )
 
 

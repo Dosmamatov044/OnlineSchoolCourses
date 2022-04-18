@@ -60,10 +60,10 @@ class UpdateInformationAboutUserViewModel @Inject constructor(
 
 
     @ExperimentalCoroutinesApi
-    fun fetchUserInfo(childText:String) {
+    fun fetchUserInfo(key:String) {
         viewModelScope.launch {
 
-            _realtimeDatabaseRepository.fetchUserInfo(childText).collect {
+            _realtimeDatabaseRepository.fetchUserInfo(key).collect {
                 when {
                     it.isSuccess -> {
                         it.getOrNull()?.let { it1 ->

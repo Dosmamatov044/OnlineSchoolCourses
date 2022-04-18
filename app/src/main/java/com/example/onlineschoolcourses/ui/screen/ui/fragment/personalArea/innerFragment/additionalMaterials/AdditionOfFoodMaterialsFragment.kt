@@ -133,15 +133,16 @@ class AdditionOfFoodMaterialsFragment : BaseFragment(), AdapterView.OnItemSelect
         viewModel.storageRefImageAdd(it)
     }
 
-    private val loadFileUser = registerForActivityResult(ActivityResultContracts.OpenDocument()) { it ->
-        binding.getFileTxtBtn.text = it.toString()
-        fileUri = it
+    private val loadFileUser =
+        registerForActivityResult(ActivityResultContracts.OpenDocument()) { it ->
+            binding.getFileTxtBtn.text = it.toString()
+            fileUri = it
 
-        fileUri?.let {
-            viewModel.storageRefFileAdd(it)
+            fileUri?.let {
+                viewModel.storageRefFileAdd(it)
+            }
+
         }
-
-    }
 
 
     private fun onGotImagePermissionResult(granted: Boolean) {
@@ -159,8 +160,13 @@ class AdditionOfFoodMaterialsFragment : BaseFragment(), AdapterView.OnItemSelect
     }
 
     override fun onItemSelected(a: AdapterView<*>, p1: View?, pos: Int, p3: Long) {
-        priceSpinner = a.getItemAtPosition(pos).toString()
-        professionSpinner = a.getItemAtPosition(pos).toString()
+        if (a.id == R.id.price_spinner) {
+
+            priceSpinner = a.getItemAtPosition(pos).toString()
+        } else if (a.id == R.id.profession_spinner) {
+
+            professionSpinner = a.getItemAtPosition(pos).toString()
+        }
     }
 
     override fun onNothingSelected(p0: AdapterView<*>?) {

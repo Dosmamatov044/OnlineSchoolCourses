@@ -68,7 +68,7 @@ class PersonalAreaFragment : BaseFragment() {
 
     private fun initAdapter() {
         binding.recyclerView.layoutManager =
-            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.recyclerView.adapter = adapter
 
     }

@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlineschoolcourses.R
+import com.example.onlineschoolcourses.helpers.asTime
 import com.example.onlineschoolcourses.helpers.loadImage
 import com.example.onlineschoolcourses.ui.screen.ui.fragment.personalArea.adaper.model.PersonalAreaMyCourseModel
 
@@ -29,6 +30,7 @@ holder.imageItem.loadImage(list[position].course_image)
         holder.moneyItem.text= pos.price.toString()
         holder.namesItem.text=pos.courseNames
         holder.namesProfessionItem.text=pos.profession.toString()
+        holder.dataItem.text=pos.timeStamp.toString().asTime()
     }
     override fun getItemCount(): Int {
 return  list.size
@@ -39,6 +41,6 @@ return  list.size
     val imageItem=view.findViewById<ImageView>(R.id.image_item)
     val namesItem=view.findViewById<TextView>(R.id.names_item)
     val namesProfessionItem=view.findViewById<TextView>(R.id.names_profession_item)
-
+  val dataItem=view.findViewById<TextView>(R.id.data_profession_item)
         }
 }

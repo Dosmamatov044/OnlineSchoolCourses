@@ -1,4 +1,5 @@
 package com.example.onlineschoolcourses.ui.screen.ui.fragment.personalArea.model
+import com.example.onlineschoolcourses.ui.screen.ui.fragment.home.model.CommonModel
 import com.example.onlineschoolcourses.ui.screen.ui.fragment.personalArea.adaper.model.PersonalAreaMyCourseModel
 import com.example.onlineschoolcourses.ui.screen.ui.fragment.personalArea.innerFragment.updateInformation.model.UserModel
 import dagger.Binds
@@ -13,7 +14,7 @@ import javax.inject.Singleton
 
 interface RealtimeDatabaseRepository {
 
-   fun fetchNotifications(childText:String) : Flow<Result<MutableList<PersonalAreaMyCourseModel>>>
+   fun fetchUserMaterials(childText:String) : Flow<Result<MutableList<PersonalAreaMyCourseModel>>>
    fun fetchUserInfo(childText:String) : Flow<Result<MutableList<UserModel>>>
-
+   fun fetchFromTwoTableData(childText:String) : Flow<Result<MutableList<CommonModel>>>
 }

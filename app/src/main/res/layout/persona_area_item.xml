@@ -60,4 +60,14 @@ app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintTop_toBottomOf="@id/names_item"
         app:layout_constraintLeft_toLeftOf="parent"
         />
+
+    <TextView
+        android:id="@+id/data_profession_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="50sp"
+        android:layout_marginTop="20sp"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

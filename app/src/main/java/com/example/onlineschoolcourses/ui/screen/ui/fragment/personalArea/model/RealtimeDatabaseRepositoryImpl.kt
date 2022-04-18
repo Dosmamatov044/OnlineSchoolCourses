@@ -1,11 +1,12 @@
 package com.example.onlineschoolcourses.ui.screen.ui.fragment.personalArea.model
 
-import android.app.Application
+import android.content.ClipData.Item
 import android.net.Uri
+import android.provider.CallLog.Calls
 import android.util.Log
 import com.example.onlineschoolcourses.di.FirebaseModule
-import com.example.onlineschoolcourses.helpers.storageRef
 import com.example.onlineschoolcourses.sealed.State
+import com.example.onlineschoolcourses.ui.screen.ui.fragment.home.model.CommonModel
 import com.example.onlineschoolcourses.ui.screen.ui.fragment.personalArea.adaper.model.PersonalAreaMyCourseModel
 import com.example.onlineschoolcourses.ui.screen.ui.fragment.personalArea.innerFragment.updateInformation.model.UserModel
 import com.google.firebase.database.*
@@ -15,7 +16,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.channels.trySendBlocking
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
@@ -84,7 +84,7 @@ class RealtimeDatabaseRepositoryImpl @Inject constructor(@FirebaseModule.UsersRe
 */
 
     @OptIn(ExperimentalCoroutinesApi::class)
-    override fun fetchNotifications(childText:String) = callbackFlow<Result<MutableList<PersonalAreaMyCourseModel>>> {
+    override fun fetchUserMaterials(childText:String) = callbackFlow<Result<MutableList<PersonalAreaMyCourseModel>>> {
         val getDataFromUsersMaterials =
             FirebaseDatabase.getInstance().reference.child("usersMaterials").child(childText)
         val postListener = object : ValueEventListener {
@@ -93,16 +93,33 @@ class RealtimeDatabaseRepositoryImpl @Inject constructor(@FirebaseModule.UsersRe
             }
 
             override fun onDataChange(snapshot: DataSnapshot) {
-
                 val list = mutableListOf<PersonalAreaMyCourseModel>()
+                val ti = object : GenericTypeIndicator<HashMap<String?, Any?>?>() {}
+                val users: Map<String?, Any?>? = snapshot.getValue(ti)
+                //iterate through each user, ignoring their UID
+                if (users != null) {
 
-                list.clear()
 
-                val msg = snapshot.getValue(PersonalAreaMyCourseModel::class.java)
+                    for ((_, value) in users) {
 
-                if (msg != null) {
-                        list.add(msg)
+                        //Get user map
+                        val singleUser = value as Map<*, *>
+
+                        list.add(
+                            PersonalAreaMyCourseModel(
+                                singleUser["courseNames"].toString(),
+                                singleUser["course_image"].toString(),
+                                singleUser["description"].toString(),
+                                singleUser["file"].toString(),
+                                singleUser["homeWork"].toString(),
+                                singleUser["price"].toString(),
+                                singleUser["profession"].toString(),
+                                singleUser["test"].toString(),
+                                singleUser["youtubeUrl"].toString(),
+                                singleUser["timeStamp"].toString().toLong()
+                            ))
                     }
+                }
                 this@callbackFlow.trySendBlocking(Result.success(list))
         }
         }
@@ -116,9 +133,71 @@ class RealtimeDatabaseRepositoryImpl @Inject constructor(@FirebaseModule.UsersRe
 
 
 
-    override fun fetchUserInfo(childText: String)=callbackFlow<Result<MutableList<UserModel>>> {
+
+
+
+
+    override fun fetchFromTwoTableData(childText: String)=callbackFlow<Result<MutableList<CommonModel>>> {
+
         val getDataFromUsersMaterials =
-            FirebaseDatabase.getInstance().reference.child("users").child(childText)
+            FirebaseDatabase.getInstance().reference.child("usersMaterials")
+        val postListener = object : ValueEventListener {
+            override fun onCancelled(error: DatabaseError) {
+                this@callbackFlow.trySendBlocking(Result.failure(error.toException()))
+            }
+
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val list = mutableListOf<CommonModel>()
+                val ti = object : GenericTypeIndicator<HashMap<String?, Any?>?>() {}
+
+                //iterate through each user, ignoring their UID
+
+
+              for (i in snapshot.children){
+
+val snap=i as DataSnapshot
+
+
+
+                  for (l in snap.children.iterator()){
+                      val users: Map<String?, Any?>? = l.getValue(ti)
+
+
+                  val model=l.getValue(CommonModel::class.java)
+
+                      if (model != null) {
+                          list.add(model)
+                      }
+                  }
+
+
+
+
+
+
+                }
+                this@callbackFlow.trySendBlocking(Result.success(list))
+
+            }
+
+        }
+        getDataFromUsersMaterials.addValueEventListener(postListener)
+
+
+        awaitClose {
+
+            getDataFromUsersMaterials.removeEventListener(postListener)
+
+        }
+    }
+
+
+
+
+
+    override fun fetchUserInfo(key: String)=callbackFlow<Result<MutableList<UserModel>>> {
+        val getDataFromUsersMaterials =
+            FirebaseDatabase.getInstance().reference.child("users").child(key)
         val postListener = object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
                 this@callbackFlow.trySendBlocking(Result.failure(error.toException()))
@@ -144,9 +223,6 @@ class RealtimeDatabaseRepositoryImpl @Inject constructor(@FirebaseModule.UsersRe
             getDataFromUsersMaterials.removeEventListener(postListener)
         }
     }.flowOn(Dispatchers.IO)
-
-
-
 
 
 

@@ -52,7 +52,7 @@ repository.readKey.collect {
     fun fetchNotifications(childText:String) {
         viewModelScope.launch {
 
-            _realtimeDatabaseRepository.fetchNotifications(childText).collect {
+            _realtimeDatabaseRepository.fetchUserMaterials(childText).collect {
                 when {
                     it.isSuccess -> {
                         it.getOrNull()?.let { it1 ->

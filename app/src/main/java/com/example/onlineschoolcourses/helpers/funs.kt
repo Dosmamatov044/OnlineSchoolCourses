@@ -7,6 +7,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.CountDownTimer
 import android.util.Log
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -15,6 +16,9 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.onlineschoolcourses.R
+import com.squareup.picasso.Picasso
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 fun replaceFragmentScreen(fragment: Fragment, addStack: Boolean = true) {
@@ -93,6 +97,16 @@ fun ImageView.loadImage(url: String?) {
         .centerCrop()
         .into(this)
 }
+
+fun ImageView.downloadAndSetImage(url: String) {
+    /* Функция раширения ImageView, скачивает и устанавливает картинку*/
+    Picasso.get()
+        .load(url)
+        .fit()
+        .placeholder(R.drawable.add_course)
+        .into(this)
+}
+
  fun hasInternet(context: Context): Boolean {
 
     // register activity with the connectivity manager service
@@ -130,6 +144,28 @@ fun ImageView.loadImage(url: String?) {
         @Suppress("DEPRECATION")
         return networkInfo.isConnected
     }
+
+
+
+
+ }
+
+fun hideKeyboard() {
+    /* Функция скрывает клавиатуру */
+    val imm: InputMethodManager = APP_SCREEN_ACTIVITY.getSystemService(Context.INPUT_METHOD_SERVICE)
+            as InputMethodManager
+    imm.hideSoftInputFromWindow(APP_SCREEN_ACTIVITY.window.decorView.windowToken, 0)
 }
 
 
+fun String.asTime(): String {
+    val time = Date(this.toLong())
+
+
+    val timeFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
+    return timeFormat.format(time).trim()
+
+
+//This will convert the BigInteger  to long
+    //This will convert the BigInteger  to long
+}
